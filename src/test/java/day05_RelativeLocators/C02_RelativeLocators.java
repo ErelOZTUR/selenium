@@ -24,7 +24,13 @@ public class C02_RelativeLocators {
         WebElement bayAreaWebElement=driver.findElement(By.id("pid8_thumb"));
         WebElement berlinWebelement=driver.findElement(with(By.tagName("a")).below(NYC).toLeftOf(bayAreaWebElement));
         //Relative locator’larin dogru calistigini test edin
-        String actualIdDegeri=berlinWebelement.getAttribute("id");
+        String actualIdDegeri = berlinWebelement.getAttribute("id");//pid7_thumb
+        String expectedIdDegeri = "pid7_thumb";
+        if (actualIdDegeri.equals(expectedIdDegeri)){
+            System.out.println("Test PASSED");
+        }else System.out.println("Test FAILED");
+        // sayfayı kapatınız
+        //driver.close();
 
     }
 }
